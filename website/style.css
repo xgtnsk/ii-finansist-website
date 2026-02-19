@@ -19,7 +19,7 @@
     --space-md: 32px;
     --space-lg: 64px;
     --space-xl: 128px;
-    --section-padding: 160px;
+    --section-padding: 100px;
 
     /* Layered Shadows for Depth */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -40,6 +40,18 @@ body {
     font-family: 'Outfit', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    cursor: none;
+}
+
+* {
+    cursor: inherit;
+}
+
+a,
+button,
+.btn,
+.interactive {
+    cursor: none;
 }
 
 .container {
@@ -58,6 +70,50 @@ body {
         radial-gradient(circle at 10% 20%, rgba(127, 61, 255, 0.1) 0%, transparent 40%),
         radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.1) 0%, transparent 40%);
     z-index: -1;
+}
+
+/* Custom Cursor 2026 */
+.c-cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent);
+    background: rgba(0, 240, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.c-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--accent);
+    display: none;
+}
+
+@media (pointer: fine) {
+
+    .c-cursor,
+    .c-cursor-dot {
+        display: block;
+    }
+}
+
+.c-cursor.active {
+    width: 60px;
+    height: 60px;
+    background: rgba(127, 61, 255, 0.1);
+    border-color: var(--primary);
 }
 
 /* Typography & Global */
@@ -191,6 +247,41 @@ section {
 .btn-outline:hover {
     background: rgba(255, 255, 255, 0.1);
     border-color: var(--text-muted);
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Progressive Glow for Buttons */
+.btn-neon {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-neon::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.btn-neon:hover::after {
+    opacity: 1;
 }
 
 /* Hero Section */
