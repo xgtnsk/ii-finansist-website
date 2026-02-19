@@ -1,0 +1,42 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Tooling
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.settings/
+.classpath
+
+# Project specific caches and temp files
+.pub-cache/
+.config/
+backups/
+tmp/
+output/
+**/*.log
+
+# Flutter/Dart specific
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub/
+
+# Secrets and credentials
+*.txt
+*.pem
+*.keystore
+*.jks
+!README.md
+!technical_task.md
+!*.md
