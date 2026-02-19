@@ -19,7 +19,7 @@
     --space-md: 32px;
     --space-lg: 64px;
     --space-xl: 128px;
-    --section-padding: 100px;
+    --section-padding: 80px;
 
     /* Layered Shadows for Depth */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -286,7 +286,7 @@ section {
 
 /* Hero Section */
 .hero {
-    padding: var(--space-xl) 0;
+    padding: var(--space-lg) 0;
     position: relative;
     overflow: hidden;
 }
@@ -550,7 +550,7 @@ section {
 
 /* Features */
 .features {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
 }
 
 .section-title {
@@ -641,7 +641,7 @@ section {
 
 /* Analytics Promo */
 .analytics-promo {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
 }
 
 .promo-box {
@@ -862,7 +862,10 @@ section {
 
 /* Stats Section */
 .stats {
-    padding: 100px 0;
+    padding: 40px 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .stats-grid {
@@ -887,7 +890,7 @@ section {
 
 /* Download Section */
 .download {
-    padding: 100px 0;
+    padding: var(--section-padding) 0;
 }
 
 .download-container {
