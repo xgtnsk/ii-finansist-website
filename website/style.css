@@ -1024,31 +1024,163 @@ section {
     font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column-reverse;
-        text-align: center;
+/* ==========================================================================
+   Responsive Design (Mobile First Tweaks)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
     }
 
     .hero-title {
-        font-size: 48px;
+        font-size: 64px;
+        letter-spacing: -2px;
+    }
+
+    .promo-box {
+        flex-direction: column;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .promo-text {
+        text-align: center;
+    }
+
+    .promo-list li {
+        justify-content: center;
+    }
+
+    .label-small {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 40px;
+    }
+
+    body {
+        cursor: auto;
+        /* Show default cursor on touch devices */
+    }
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+        /* Hide custom cursor on mobile */
+    }
+
+    a,
+    button,
+    .btn,
+    .feature-card,
+    .glass {
+        cursor: pointer;
+    }
+
+    .nav-links a:not(.btn) {
+        display: none;
+        /* Hide nav links on mobile for simplicity */
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero .container {
+        flex-direction: column-reverse;
+        /* Mockup below text */
+        text-align: center;
+        gap: 60px;
+    }
+
+    .hero-title {
+        font-size: 44px;
+        margin-top: 10px;
+        letter-spacing: -1px;
     }
 
     .hero-subtitle {
-        margin: 0 auto 40px;
+        font-size: 18px;
+        margin: 0 auto 32px;
+        max-width: 100%;
     }
 
     .hero-actions {
-        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .btn-large {
+        width: 100%;
+        text-align: center;
+    }
+
+    .phone-mockup {
+        width: 240px;
+        height: 480px;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
     }
 
-    .promo-box {
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .analytics-showcase {
         flex-direction: column;
-        padding: 40px;
+        min-height: auto;
+    }
+
+    .donut-chart-2026 {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stats-grid {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .stat-value {
+        font-size: 42px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .download-container {
+        padding: 40px 20px;
+    }
+
+    .download-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+
+    .promo-title {
+        font-size: 28px;
     }
 }
