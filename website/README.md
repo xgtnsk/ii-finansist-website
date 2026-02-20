@@ -20,6 +20,10 @@
 - **CSS3**: Современные стили (Glassmorphism, Neon Glow, CSS Variables, Flexbox/Grid).
 - **JavaScript**: Базовая интерактивность (в разработке).
 - **Шрифты**: Google Fonts (Outfit).
+- **SEO & AI Ready**:
+    - Интегрирована микроразметка Schema.org (JSON-LD) для индексации ИИ-агентами.
+    - Настроены Open Graph и Twitter Cards для красивых превью в соцсетях.
+    - Добавлены `robots.txt` и `sitemap.xml` для поисковых систем.
 
 ## Авторы
 
